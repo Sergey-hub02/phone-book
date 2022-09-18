@@ -5,7 +5,7 @@ import { firstValueFrom } from "rxjs";
 
 @Injectable()
 export default class ContactService {
-  private APIUrl: string = "http://localhost:8080/v1/contacts";
+  private APIUrl: string = "/v1/contacts";
 
   /**
    * Выводит сообщение об ошибке
