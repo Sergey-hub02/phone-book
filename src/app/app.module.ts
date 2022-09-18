@@ -7,6 +7,12 @@ import { ContactListComponent } from './contactlist/contact-list/contact-list.co
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
+import * as express from "express";
+
+const app = express();
+const dist = __dirname + "/dist/";
+app.use(express.static(dist));
+
 @NgModule({
   declarations: [
     AppComponent,
