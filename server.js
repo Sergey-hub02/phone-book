@@ -12,6 +12,8 @@ const main = async () => {
 
   app.use(bodyParser.json());
 
+  app.use(express.static(__dirname + "/dist/"));
+
   app.use((_, response, next) => {
     response.setHeader("Access-Control-Allow-Origin", "*");
     response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
